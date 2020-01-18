@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gallery_grid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/screen_background_dark_transparent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#222222"
+                android:padding="10dp"
+                android:text="GALLERY"
+                android:textColor="#d70b23"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="10dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Images"
+                android:textAllCaps="true"
+                android:textColor="#0a810c"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPagergallery"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_gravity="top|center" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:background="@android:drawable/screen_background_dark_transparent"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false">
+
+            </android.support.v7.widget.RecyclerView>
+        </FrameLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_aboutGov"
+            android:icon="@drawable/aasule"
+            android:title="About the Governor" />
+        <item
+            android:id="@+id/nav_aboutNas"
+            android:icon="@mipmap/ic_nas_foreground"
+            android:title="About Nasarawa State" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Gallery" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Feedback" />
+            <item
+                android:id="@+id/nav_aboutApp"
+                android:icon="@drawable/ic_smartphone_black_24dp"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>

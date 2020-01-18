@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    tools:context="com.leedroids.govaasulenewsfeed.news_activity"
+    tools:showIn="@layout/main_news_layout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scollViewBody"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <FrameLayout
+                    android:id="@+id/newsbodycover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="110dp"
+                        android:background="@android:color/transparent"
+                        android:elevation="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newsub"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="3"
+                            android:maxLines="3"
+                            android:padding="10dp"
+                            android:text="Trump’s Plan for AmericanMade iPhonew Wold Be Disastrous. Trump’s Plan for AmericanMade iPhonew Wold Be Disastrous"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="18sp" />
+
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/transparent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/newsimage2"
+                                android:layout_width="45px"
+                                android:layout_height="45px"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/ic_launcher_round" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:fontFamily="sans-serif-light"
+                                android:padding="5dp"
+                                android:text="News Feed"
+                                android:textColor="@color/textColorPrimary"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/newsPostTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_weight="1"
+                                android:fontFamily="sans-serif-light"
+                                android:padding="5dp"
+                                android:text="1 day ago"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/textColorPrimary"
+                                android:textSize="13sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/instruction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:ellipsize="marquee"
+                            android:fadingEdge="horizontal"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:padding="5dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="Long press the brightness button to disable the dark mode"
+                            android:textColor="#ffffff"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/newsimage1"
+                        android:layout_width="match_parent"
+                        android:layout_height="259dp"
+                        android:foreground="@android:drawable/screen_background_dark_transparent"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <ImageView
+                        android:id="@+id/backButton"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_arrow_back_black_24dp"
+                        android:tint="#fff" />
+
+                    <ImageView
+                        android:id="@+id/shareButton"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_menu_share"
+                        android:tint="#fff" />
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/newsCardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="270dp"
+                        android:elevation="8dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/innerLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="#f2f2f2"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+
+                            <TextView
+                                android:id="@+id/newsbody"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#ffffff"
+                                android:fontFamily="sans-serif-light"
+                                android:padding="10dp"
+                                android:text="Why even a President Trump couldn’t make Apple manufacture iPhone in the state."
+                                android:textColor="#000"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#222222"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="For more information, contact us via helpdesk@startupnasarawa.com"
+                        android:textAlignment="center"
+                        android:textColor="#9E9E9E"
+                        android:textSize="10sp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="CopyRight 2019. All right reserved. "
+                        android:textAlignment="center"
+                        android:textColor="#9E9E9E"
+                        android:textSize="10sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_startup_nas" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.leedroids.govaasulenewsfeed.news_activity">
+
+
+
+    <include layout="@layout/news_layout" />
+
+    <LinearLayout
+        android:id="@+id/transitions_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:orientation="vertical">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/activateNightMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/brightness"
+            android:visibility="gone"
+            app:backgroundTint="#fff"
+            app:fabSize="mini" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/increaseFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_zoom_in_black_24dp"
+            android:tint="#FF37DE50"
+
+            android:visibility="gone"
+            app:backgroundTint="#fff"
+            app:fabSize="mini" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/decreaseFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_zoom_out_black_24dp"
+
+            android:tint="#FF37DE50"
+            android:visibility="gone"
+            app:backgroundTint="#fff"
+            app:fabSize="mini" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+
+            android:cropToPadding="false"
+
+            android:paddingEnd="15dp"
+            android:src="@drawable/more1"
+            app:backgroundTint="#fff"
+            app:fabSize="normal" />
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

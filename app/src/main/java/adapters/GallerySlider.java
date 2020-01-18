@@ -1,0 +1,70 @@
+package adapters;
+
+import android.content.Context;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import com.leedroids.govaasulenewsfeed.R;
+
+/**
+ * Created by HP-USER on 15-Aug-19.
+ */
+
+public class GallerySlider extends PagerAdapter {
+    private Context context;
+    int[] images;
+
+
+
+
+    public GallerySlider(Context context,int[] images){
+        this.context = context;
+
+
+        this.images = images;
+
+    }
+    @Override
+    public int getCount(){
+        return
+                images.length;
+
+    }
+
+    @Override
+    public  boolean isViewFromObject(View view, Object object){
+
+        return view == object;
+    }
+
+    @Override
+    public  Object instantiateItem(ViewGroup container, int position){
+
+        ImageView image;
+        LayoutInflater inflater =(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        View view = inflater.inflate(R.layout.galleryslider_item, null);
+
+
+
+        // get reference to imageView in pager_item layout
+        image = (ImageView) view.findViewById(R.id.gallerysliderImage);
+// Set an image to the ImageView
+        image.setImageResource(images[position]);
+// Add pager_item layout as the current page to the ViewPager
+        ((ViewPager) container).addView(view,0);
+        return view;
+    }
+    @Override
+    public  void destroyItem(ViewGroup container, int position, Object object){
+
+
+        // Remove pager_item layout from ViewPager
+        ((ViewPager) container).removeView((LinearLayout) object);
+    }
+}
